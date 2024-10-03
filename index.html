@@ -4,7 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Weather App</title>
+    <title>Weather App</title>
+
+    <!-- Add favicon -->
+   <link rel="icon" type="image/png" href="./images/Jaan-Jaak-Weather-Rain.64.png" />
+   
+
+   
 
     <!-- bootstrap cdn -->
     <link
@@ -26,7 +32,7 @@
             <div class="col-md-6 offset-md-3">
               <div class="search-weather text-center py-5">
                 <div class="weather-text mb-3 text-white">
-                  <h2>Current Weather App</h2>
+                  <h2 class="fs-2">Current Weather App</h2>
                 </div>
                 <div class="weather-form">
                   <div class="input-group">
@@ -44,15 +50,15 @@
                       Search
                     </button>
                   </div>
-                  <div id="empty-input"></div>
+                  <div id="empty-input" class="mt-2"></div>
                 </div>
               </div>
             </div>
           </div>
-          <!-- another row -->
-          <div class="row">
+          <!-- Another row for weather results -->
+          <div class="row mt-4">
             <div class="col-md-6 offset-md-3">
-              <div id="container" class="weather-details text-center"></div>
+              <div id="container" class="weather-details text-center text-white"></div>
             </div>
           </div>
         </div>
@@ -60,6 +66,6 @@
     </main>
 
     <!-- js files -->
-    <script src="js/index.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>

@@ -1,20 +1,139 @@
-.weather-bg{
+/* Full-screen background and responsive layout */
+.weather-bg {
     background-image: url(../images/weather-bg1.jpg);
     background-size: cover;
     background-position: center center;
     width: 100%;
     height: 100vh;
-}
-input.form-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Input field styling */
+  input.form-control {
     height: 50px;
-}
-button.btn.btn-danger {
-    width: 130px;
-}
-
-button{
-    background-image: url(../images/weather-bg.jpg) !important;
-    background-size: cover  !important;
-    background-position: center center !important;
-    color: #161313 !important;
-}
+    font-size: 1.1rem;
+  }
+  
+  /* Button styling */
+  button.btn.btn-danger {
+    height: 50px;
+    font-size: 1.1rem;
+    border: none;
+    color: #fff;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    background-size: 200% 200%;
+    transition: background-position 0.5s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    width: 100%; /* Full width by default */
+    max-width: 200px; /* Restrict the width of the button */
+    margin: 0 auto; /* Center align the button */
+  }
+  
+  /* Button hover animation */
+  button:hover {
+    background-position: right center;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Responsive Design Adjustments */
+  @media (max-width: 768px) {
+    input.form-control {
+      height: 45px; /* Reduce input height on smaller screens */
+      font-size: 1rem; /* Slightly smaller input font size */
+    }
+  
+    button.btn.btn-danger {
+      font-size: 1rem; /* Slightly smaller button font on mobile */
+      height: 45px; /* Reduce button height */
+      max-width: 150px; /* Adjust max width for mobile */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    input.form-control {
+      height: 40px; /* Further reduce input height on very small screens */
+      font-size: 0.9rem; /* Smaller font size */
+    }
+  
+    button.btn.btn-danger {
+      font-size: 0.9rem; /* Smaller font for very small screens */
+      height: 40px; /* Further reduce button height */
+      max-width: 120px; /* Further adjust button width */
+    }
+  }
+  
+  /* Style for the weather app title */
+  /* Correct order for vendor-prefixed and non-prefixed properties */
+.weather-text h2 {
+    font-size: 2.5rem;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b, #6dd5fa, #2980b9);
+    -webkit-background-clip: text; /* Vendor prefix first */
+    background-clip: text; /* Standard property after vendor prefix */
+    color: transparent;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-right: 2px solid rgba(255, 255, 255, 0.75); /* Blinking cursor effect */
+    white-space: nowrap;
+    width: 0;
+    animation: typing 4s steps(22, end) infinite, blink-caret 0.75s step-end infinite;
+  }
+  
+  
+  /* The typing effect */
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+    50% {
+      width: 100%;
+    }
+    70% {
+      width: 100%;
+    }
+    100% {
+      width: 0;
+    }
+  }
+  
+  /* The caret blinking effect */
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: rgba(255, 255, 255, 0.75);
+    }
+  }
+  
+  /* Weather details container styling */
+  .weather-details h4, .weather-details h5, .weather-details h6 {
+    color: white;
+  }
+  
+  /* Subtle pulse animation for the button */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  
+  /* Add the pulse animation to the button on hover */
+  button:hover {
+    animation: pulse 1s infinite;
+  }
+  
